@@ -1,0 +1,121 @@
+.showing {
+  width: 100%;
+  position: relative;
+  .carousel{
+ 
+  
+    .card {
+      background: rgba(255, 255, 255, 0.4);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(9.5px);
+      -webkit-backdrop-filter: blur(9.5px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      height: 400px;
+      margin-right: 4rem;
+      width: 250px;
+      position: relative;
+    
+      .card-img-top {
+        border-radius: 10px;
+      
+      }
+      &:hover > .overlay {
+        opacity: 1; 
+        height: 100%;
+        width: 100%;
+        .card-body {
+          background: rgba(12, 12, 12, 0.45);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          backdrop-filter: blur(9px);
+          -webkit-backdrop-filter: blur(9px);
+          border-radius: 10px;
+          border: 1px solid rgba(82, 79, 79, 0.18);
+       
+        }
+      
+        .btn-book {
+          width: 150px;
+          height: 70px;
+          font-size: 20px;
+          border-radius: 50px;
+          border-style: none;
+          color: white;
+          background-color: #4158d0;
+          background-image: linear-gradient(
+            43deg,
+            #4158d0 0%,
+            #c850c0 46%,
+            #ffcc70 100%
+          );
+  
+          box-shadow: 5px 5px 10px #f2f1f325, -5px -5px 10px #581a33;
+          opacity: 1;
+        }
+      }
+      .tag{
+        .text {
+          width: 50px;
+          height: 50px;
+          background-color: #4158d0;
+          background-image: linear-gradient(
+            43deg,
+            #4158d0 0%,
+            #c850c0 46%,
+            #ffcc70 100%
+          );
+  
+          box-shadow: 5px 5px 10px #f2f1f325, -5px -5px 10px #581a33;
+          backdrop-filter: blur( 4px );
+          -webkit-backdrop-filter: blur( 4px );
+          border-radius: 50px;
+          z-index: 1000;
+          position: absolute;
+          top: 10px;
+          right:0;
+          text-transform: uppercase;
+          font-family: verdana;
+          font-size:40px;
+          font-weight: 500;     
+          text-align: center;  
+          padding-top:15px;
+          
+      }
+    }
+    //overlay
+      .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 0;
+        width: 100%;
+        opacity: 0.5;
+        transition: 0.5s ease;
+        background: rgba(147, 58, 199, 0.534);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(10.5px);
+        -webkit-backdrop-filter: blur(10.5px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        .text {
+          color: white;
+          font-size: 20px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          text-align: center;
+        }
+        .btn-book {
+          opacity: 0;
+        }
+      }
+    }
+   
+  }
+ 
+}

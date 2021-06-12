@@ -1,0 +1,19 @@
+.userList .search-form {
+  display: block;
+}
+.userList .them {
+  position: relative;
+}
+.userList .them .btnThem {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20%;
+}
+.userList .table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  box-sizing: border-box;
+  padding-left: 18%;
+}

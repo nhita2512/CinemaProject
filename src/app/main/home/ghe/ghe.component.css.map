@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,MAAM,CAAC;EACL,OAAO,EAAE,CAAC;EACV,KAAK,EAAE,IAAI;CACZ",
+    "sources": [
+        "ghe.component.scss"
+    ],
+    "names": [],
+    "file": "ghe.component.css"
+}

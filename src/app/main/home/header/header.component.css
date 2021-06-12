@@ -1,0 +1,62 @@
+header {
+  position: relative;
+  background: #7b4397;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#dc2430), to(#7b4397));
+  background: linear-gradient(to right, #dc2430, #7b4397);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+header .dn-dk {
+  position: absolute;
+  right: 0;
+}
+
+header i {
+  font-size: 30px;
+  color: orangered;
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+header .logo {
+  font-size: 40px;
+  text-align: center;
+  color: #fff;
+  -webkit-animation: glow 1.5s ease-in-out infinite alternate;
+          animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+header .logo .hot {
+  letter-spacing: 5px;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
+  }
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0073e6, 0 0 40px #b000e6, 0 0 50px #d300e6, 0 0 60px #e6008e, 0 0 70px #e600d3;
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
+  }
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0073e6, 0 0 40px #b000e6, 0 0 50px #d300e6, 0 0 60px #e6008e, 0 0 70px #e600d3;
+  }
+}
+
+header .navbar .nav-link {
+  color: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+header .navbar .nav-link:hover {
+  color: orangered;
+}
+/*# sourceMappingURL=header.component.css.map */

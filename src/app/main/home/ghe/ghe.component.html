@@ -1,0 +1,6 @@
+<ng-container *ngIf="!itemGhe.booked;else gheDaDuocChon">
+    <button class="btn-book mr-2 mb-2 " [class]="{'btn-danger':status}" (click)="datGhe()">{{itemGhe.id}}</button>
+</ng-container>
+<ng-template #gheDaDuocChon>
+    <button [disabled]="true" class="btn btn-danger mr-2 mb-2 " style="cursor: not-allowed;">{{itemGhe.id}}</button>
+</ng-template>

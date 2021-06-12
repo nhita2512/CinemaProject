@@ -1,0 +1,16 @@
+.tin .a {
+  overflow: hidden;
+}
+.tin .a .a-tin {
+  font-size: 40px;
+  cursor: pointer;
+  margin: 10px;
+  text-decoration: none;
+  color: antiquewhite;
+  transition: all 0.3s;
+  display: inline-block;
+}
+.tin .a .a-tin:hover {
+  height: auto;
+  color: #f1b613;
+}

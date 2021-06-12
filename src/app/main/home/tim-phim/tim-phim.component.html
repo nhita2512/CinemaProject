@@ -1,0 +1,34 @@
+<div class="homeTool container justify-content-center">
+    <div class="dropdown selectPhim">
+        <div class="btn-select d-flex" tabindex="0" style="cursor: pointer;">
+            <select class="list" style="border-radius:10px;padding: 15px;">
+                <h3 class="text-center text-white mt-2"> Select Movie <img
+                        src="https://image.flaticon.com/icons/png/512/4470/4470993.png" width="50px" alt=""></h3>
+                <option value="" *ngFor="let movie of movieList">{{movie.tenPhim}}</option>
+            </select>
+            <select class="list" name="" id="" style="border-radius:10px;padding: 15px;margin: 10px;">
+                <h3>Select Cinema</h3>
+                <option value="">
+                    <a href="">BHD</a>
+                </option>
+                <option value=""><a href="">CGV</a></option>
+            </select>
+            <select class="list" name="" id="" style="border-radius:10px;padding: 15px;margin: 10px;">
+                <h3>Select Date</h3>
+                <option value="">
+                    <a href="">20/10/2019</a>
+                </option>
+            </select>
+            <select class="list" name="" id="" style="border-radius:10px;padding: 15px;margin: 10px;">
+                <h3>Select Time</h3>
+                <option value="">
+                    <a href="">10 A.M</a>
+                </option>
+                <option value=""> <a href="">10 P.M</a></option>
+            </select>
+            <button class="btnBookVe" style="padding:15px;margin:10px;border: none; background-color: #52ACFF;
+            background-image: linear-gradient(180deg, #52ACFF 25%, #FFE32C 100%);
+            border-radius: 10px;">Book Ticket</button>
+        </div>
+    </div>
+</div>

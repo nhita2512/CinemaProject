@@ -1,0 +1,35 @@
+.container {
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(9.5px);
+  -webkit-backdrop-filter: blur(9.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+ .poster{
+  position: relative;
+  .btnModal {
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    padding: auto;
+    text-align: center;
+
+    .play{
+      padding: 10px;
+      transition: all 0.3s;
+      transform: scale(1);
+      border: 2px solid black;
+      &:hover{
+        transform:scale(1.1);
+      }
+    }
+  }
+ }
+  table {
+    border: 2px solid whitesmoke;
+    tr {
+      cursor: pointer;
+    }
+  }
+ 
+}

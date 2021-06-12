@@ -1,0 +1,16 @@
+.scroll-to-top {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+    .toTop{
+        border-radius: 50%;
+         background-image: linear-gradient( 120deg,  rgba(202,50,50,1) 5.7%, rgba(252,195,12,1) 92.4% );
+    }
+   }
+   .show-scrollTop {
+    opacity: 1;
+    transition: all .2s ease-in-out;
+   }
+

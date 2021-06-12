@@ -1,0 +1,148 @@
+<div class="userList">
+    <div class="search-form text-center">
+        <input type="search" [(ngModel)]="searchText" placeholder="Search text">
+        <button class="btn btn-success" (click)="handleSearch()">Search</button>
+        <ul *ngFor="let user of userList | filter: searchText">
+            <li *ngIf="searchText">{{user.taiKhoan}}-{{user.hoTen}}</li>
+        </ul>
+
+    </div>
+
+    <div class="them">
+        <h2 class="text-center">User List</h2>
+        <button class="btn btn-primary mb-5 btnThem" type="button" (click)="modalShow()">Add User</button>
+
+    </div>
+    <!-- modal from add btn click-->
+    <!-- Button trigger modal-->
+
+
+    <!-- Modal for Add User-->
+    <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">User Form</h5>
+                    <button (click)="modalHide()" type="button" id="btnClose" class="close" data-dismiss="modal"
+                        aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form style="height:500px;overflow-y:auto" [formGroup]="addForm" class="">
+                        <div class="form-group">
+                            <label>UserName</label>
+                            <input type="text" class="form-control" formControlName="taiKhoan" />
+                            <div *ngIf="checkError('taiKhoan')" class="alert alert-danger">
+                                <span *ngIf="checkError('taiKhoan', 'required')">
+                                    Tài khoản không đc để trống
+                                </span>
+                                <span *ngIf="
+                          checkError('taiKhoan', 'minlength') ||
+                          checkError('taiKhoan', 'maxlength')
+                        ">
+                                    Tài khoản phải từ 3 đến 20 kí tự
+                                </span>
+                            </div>
+                        </div>
+                        <!-- Lam Validate lai cho cac phia duoi tuong tu nhu Ussername -->
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="text" class="form-control" formControlName="matKhau" />
+                            <div *ngIf="checkError('matKhau')" class="alert alert-danger">
+                                <span *ngIf="checkError('matKhau', 'required')">
+                                    Mat Khau không đc để trống
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="text" class="form-control" formControlName="email" />
+                            <div *ngIf="checkError('email')" class="alert alert-danger">
+                                <span *ngIf="checkError('email', 'required')">
+                                    Email không đc để trống
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <input type="text" class="form-control" formControlName="soDt" />
+                                <div *ngIf="checkError('soDt')" class="alert alert-danger">
+                                    <span *ngIf="checkError('soDt', 'required')">
+                                        So Dien Thoai không đc để trống
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Ma Nhom</label>
+                                <input type="text" class="form-control" formControlName="maNhom" />
+                                <div *ngIf="checkError('maNhom')" class="alert alert-danger">
+                                    <span *ngIf="checkError('maNhom', 'required')">
+                                        Ma Nhom không đc để trống
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Ma Loai Nguoi Dung</label>
+                                <input type="text" class="form-control" formControlName="maLoaiNguoiDung" />
+                                <div *ngIf="checkError('maLoaiNguoiDung')" class="alert alert-danger">
+                                    <span *ngIf="checkError('maLoaiNguoiDung', 'required')">
+                                        Ho Ten không đc để trống
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>FullName</label>
+                                <input type="text" class="form-control" formControlName="hoTen" />
+                                <div *ngIf="checkError('hoTen')" class="alert alert-danger">
+                                    <span *ngIf="checkError('hoTen', 'required')">
+                                        Ho Ten không đc để trống
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <button class="btn btn-success mr-2" [disabled]="isLoading" (click)="AddUser()">ADD</button>
+                        <button class="btn btn-info mr-2" [disabled]="isLoading" (click)="updateUser()">UPDATE</button>
+                        <button class="btn btn-danger mr-2" (click)="reset()">RESET</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button (click)="modalHide()" type="button" class="btn btn-secondary"
+                        data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-sm">
+            <thead>
+                <tr>
+                    <th>Tai Khoan</th>
+                    <th>Ho Ten</th>
+                    <th>Email</th>
+                    <th>Mat Khau</th>
+                    <th>So Dien Thoai</th>
+                    <th>Ma Loai Nguoi Dung</th>
+                    <th>Cap Nhat Info</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of userList">
+                    <td>{{user.taiKhoan}}</td>
+                    <td>{{user.hoTen}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.matKhau}}</td>
+                    <td>{{user.soDt}}</td>
+                    <td>{{user.maLoaiNguoiDung}}</td>
+                    <td>
+                        <button class="btn btn-info" (click)="onEdit(user)">Edit</button>
+                        <button class="btn btn-danger" (click)="handleDelete(user.taiKhoan)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="container ">
+  <h1 class="text-center mt-5 mb-5 text-white">Cinemas</h1>
+
+  <div class="cot d-flex">
+    <ul class="nav flex-row mr-5 cot1">
+      <li class="nav-item">
+        <a class="nav-link active" href="#" *ngFor="let rap of heThongRapList"><img src="{{rap.logo}}" width="70px"
+            height="50px" alt="logo"></a>
+      </li>
+    </ul>
+    <div class="nav cot2 row">
+      <div class="col-12"><select class="nav-item" style="border-radius: 10px;padding: 15px;">
+          <option class="nav-link active text-white" *ngFor="let cumRap of cumRapList">{{cumRap.tenCumRap}}</option>
+        </select></div>
+      <div class="col-12"><select style="border-radius: 10px;padding: 15px;" class="nav-item">
+          <option class="nav-link text-white " *ngFor="let cumRap of cumRapList3">{{cumRap.tenCumRap}}</option>
+        </select></div>
+      <div class="col-12"><select style="border-radius: 10px;padding: 15px;" class="nav-item">
+          <option class="nav-link text-white " *ngFor="let cumRap of cumRapList5">{{cumRap.tenCumRap}}</option>
+        </select></div>
+      <div class="col-12"> <select style="border-radius: 10px;padding: 15px;" class="nav-item">
+          <option class="nav-link text-white " *ngFor="let cumRap of cumRapList1">{{cumRap.tenCumRap}}
+          </option>
+        </select></div>
+      <div class="col-12"><select style="border-radius: 10px;padding: 15px;" class="nav-item">
+          <option class="nav-link " *ngFor="let cumRap of cumRapList4">{{cumRap.tenCumRap}}Chua Khai Truong
+          </option>
+        </select></div>
+      <div class="col-12"><select style="border-radius: 10px; padding: 15px;" class="nav-item">
+          <option class="nav-link text-white " *ngFor="let cumRap of cumRapList2">{{cumRap.tenCumRap}}</option>
+        </select></div>
+    </div>
+    <ul class="cot3 flex-row w-100">
+      <h3>Cinema ShowTime</h3>
+      <p>Hien Tai Khong Co Suat Chieu!</p>
+    </ul>
+  </div>
+</div>

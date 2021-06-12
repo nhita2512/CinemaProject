@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+@import "~ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
+@import "~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
+* {
+  font-size: 16px;
+  font-family: "Fredoka One", cursive;
+  html,
+  body {
+    height: 100%;
+  }
+  body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+  }
+  // button {
+  //   border-radius: 10px;
+  //   border: none;
+  //   background: rgb(34, 193, 195);
+  //   background: linear-gradient(
+  //     0deg,
+  //     rgba(34, 193, 195, 1) 0%,
+  //     rgba(253, 45, 241, 0.9528186274509804) 100%
+  //   );
+  //   &:hover {
+  //     color: #fff;
+  //     transition: all 0.8s;
+  //   }
+  // }
+}
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

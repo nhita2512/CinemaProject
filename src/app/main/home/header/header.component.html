@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg ">
+    <a class="navbar-brand" routerLink='/'>
+        <span class="logo"><span class="hot">HOT</span> Movie</span>
+    </a>
+    <div>
+        <button [class.checked]="!checked" (click)="showDropDown()" class="navbar-toggler" type="button" data-toggle=""
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-align-justify"></i>
+        </button>
+    </div>
+
+    <div *ngIf="!checked" class=" navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link">Movies List<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">Cinemas</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link">News</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ">Mobile App</a>
+            </li>
+            <li class="nav-item" *ngIf="currentUser">
+                <a class="nav-link" routerLink="/admin">Admin</a>
+            </li>
+
+        </ul>
+        <ul class="navbar-nav mr-0 dn-dk">
+            <li class="nav-item mr-2 d-flex">
+                <a *ngIf="currentUser" class="text-light" style="cursor: pointer;"><img
+                        src="https://image.flaticon.com/icons/png/512/245/245481.png" width="50px"
+                        alt="">{{currentUser.taiKhoan}}</a>
+                <button class="nav-link btn btn-primary mr-2 " *ngIf="!currentUser" routerLink='/signin'>Sign
+                    In</button>
+            </li>
+            <li class="nav-item"><button *ngIf="currentUser" class="btn btn-warning" (click)="signOut()">Sign
+                    Out</button></li>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,19 @@
+.tin{
+    .a{   
+        overflow: hidden;//Overflow hidden de ngoai the container
+        .a-tin{
+        font-size: 40px;
+        cursor: pointer;
+         margin: 10px;
+         text-decoration: none;
+         color: antiquewhite;
+         transition: all 0.3s;
+         display: inline-block; 
+         &:hover {
+            height: auto;
+            color: rgb(241, 182, 19);
+            }
+        }
+       
+    }
+}

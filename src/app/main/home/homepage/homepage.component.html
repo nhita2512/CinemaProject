@@ -1,0 +1,19 @@
+<app-slider></app-slider>
+<app-tim-phim></app-tim-phim>
+<app-movie-list></app-movie-list>
+<app-he-thong-rap></app-he-thong-rap>
+<div class="container tin mt-5">
+    <div class="row">
+
+        <div class="col-lg-12 text-center a">
+            <a class="a-tin text-center mt-5 mb-5 active" [class.checked]="!checked" (click)="show()">News/Reviews</a>
+        </div>
+        <div class="col-lg-12">
+            <app-news *ngIf="!checked"></app-news>
+            <app-review *ngIf="checked"></app-review>
+        </div>
+    </div>
+</div>
+<h1 class="text-center mt-5 mb-5 text-white">Booking Movie App</h1>
+<app-mobile-app></app-mobile-app>
+<app-modal-widow></app-modal-widow>

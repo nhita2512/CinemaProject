@@ -1,0 +1,27 @@
+.homeTool {
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  //ket hop screen min vs max 
+  @media (min-width: 240px) and  (max-width:1000px)  {
+    display: flex;
+  }
+  .btn-select{
+   border-radius: 10px;
+   border: none;
+   @media (min-width:240px) and (max-width:1000px) {
+    flex-direction: column;
+    margin: 10px;
+    width: 90%;
+  }
+  .list{
+    display: inline-flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    margin: 10px;
+    
+  }
+ 
+ }
+}

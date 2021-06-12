@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,gBAAgB,CAAC;EACf,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,IAAI;CAOZ;;AAVD,AAIE,gBAJc,CAId,EAAE,CAAC;EACD,UAAU,EAAE,yBAAyB;EACrC,UAAU,EAAE,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,CAAC,CAAC,uBAAuB;EAChD,eAAe,EAAE,SAAS;EAC1B,MAAM,EAAE,GAAG,CAAC,KAAK,CAAC,yBAAyB;CAC5C",
+    "sources": [
+        "movie-b.component.scss"
+    ],
+    "names": [],
+    "file": "movie-b.component.css"
+}

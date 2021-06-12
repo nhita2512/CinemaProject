@@ -1,0 +1,86 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-sm-6 mt-2 mb-5">
+            <form [formGroup]="" class="mt-4 mb-4">
+                <!-- <pre>{{ signupForm.value | json }}</pre> -->
+                <h1 class="text-center text-black">Edit User Form</h1>
+
+                <div class="form-group">
+                    <label>UserName</label>
+                    <input type="text" class="form-control" formControlName="taiKhoan" />
+                    <div *ngIf="checkError('taiKhoan')" class="alert alert-danger">
+                        <span *ngIf="checkError('taiKhoan', 'required')">
+                            Tài khoản không đc để trống
+                        </span>
+                        <span *ngIf="
+                  checkError('taiKhoan', 'minlength') ||
+                  checkError('taiKhoan', 'maxlength')
+                ">
+                            Tài khoản phải từ 3 đến 20 kí tự
+                        </span>
+                    </div>
+                </div>
+                <!-- Lam Validate lai cho cac phia duoi tuong tu nhu Ussername -->
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="text" class="form-control" formControlName="matKhau" />
+                    <div *ngIf="checkError('matKhau')" class="alert alert-danger">
+                        <span *ngIf="checkError('matKhau', 'required')">
+                            Mat Khau không đc để trống
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" class="form-control" formControlName="email" />
+                    <div *ngIf="checkError('email')" class="alert alert-danger">
+                        <span *ngIf="checkError('email', 'required')">
+                            Email không đc để trống
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="text" class="form-control" formControlName="soDt" />
+                        <div *ngIf="checkError('soDt')" class="alert alert-danger">
+                            <span *ngIf="checkError('soDt', 'required')">
+                                So Dien Thoai không đc để trống
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Ma Nhom</label>
+                        <input type="text" class="form-control" formControlName="maNhom" />
+                        <div *ngIf="checkError('maNhom')" class="alert alert-danger">
+                            <span *ngIf="checkError('maNhom', 'required')">
+                                Ma Nhom không đc để trống
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Ma Loai Nguoi Dung</label>
+                        <input type="text" class="form-control" formControlName="maLoaiNguoiDung" />
+                        <div *ngIf="checkError('maLoaiNguoiDung')" class="alert alert-danger">
+                            <span *ngIf="checkError('maLoaiNguoiDung', 'required')">
+                                Ho Ten không đc để trống
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>FullName</label>
+                        <input type="text" class="form-control" formControlName="hoTen" />
+                        <div *ngIf="checkError('hoTen')" class="alert alert-danger">
+                            <span *ngIf="checkError('hoTen', 'required')">
+                                Ho Ten không đc để trống
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="btn btn-success mr-2" [disabled]="isLoading">EDIT</button>
+                <span *ngIf="isLoading" class="spinner-border spinner-border-sm mr-1"></span>
+                <a routerLink="/admin/quanlyuser">Cancel?</a>
+            </form>
+        </div>
+    </div>
+</div>

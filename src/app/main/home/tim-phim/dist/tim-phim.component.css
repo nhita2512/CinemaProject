@@ -1,0 +1,28 @@
+.homeTool {
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+@media (min-width: 240px) and (max-width: 1000px) {
+  .homeTool {
+    display: flex;
+  }
+}
+.homeTool .btn-select {
+  border-radius: 10px;
+  border: none;
+}
+@media (min-width: 240px) and (max-width: 1000px) {
+  .homeTool .btn-select {
+    flex-direction: column;
+    margin: 10px;
+    width: 90%;
+  }
+}
+.homeTool .btn-select .list {
+  display: inline-flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  margin: 10px;
+}

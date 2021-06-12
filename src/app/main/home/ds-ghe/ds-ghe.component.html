@@ -1,0 +1,42 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-lg-9 col-md-9 col-sm-12">
+            <p class="text-center text-dark screen">Screen 💻</p>
+            <app-ghe *ngFor="let ghe of dsGhe" [itemGhe]="ghe" (emitStatus)="datGheParent($event,ghe)">
+            </app-ghe>
+            <hr>
+
+            <div class="row">
+                <div class="col-4">Ghe Da Dat
+                    <button class="btn btn-danger" style="width: 40px;height: 40px;"></button>
+                </div>
+                <div class="col-4">Ghe Dang Dat
+                    <button class="rounded"
+                        style="width:40px;height:40px;background-image: linear-gradient( 135deg, #FDEB71 10%, #F8D800 100%); border-color: red;"></button>
+                </div>
+                <div class="col-4">
+                    Ghe Chua Dat
+                    <button class="rounded"
+                        style="width:40px;height:40px;background-image: linear-gradient( 135deg, #FDEB71 10%, #F8D800 100%);"></button>
+                </div>
+            </div>
+        </div>
+        <div class="info col-lg-3 col-md-3 col-sm-12">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 mb-2" style="border: 1px solid white;">
+                    <img src="" alt="">
+                    <p>Chi Tiet Phim</p>
+
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12" style="border: 1px solid white;">
+                    <h2 class="text-center"><u>Booking Seats Information</u> </h2>
+                    <p>Booked Seats:{{soGheDaDat}} </p>
+                    <p>Available Seats:{{soGheConLai}} </p>
+                    <p *ngFor="let ghe of dsGheDangDat">Type of Seat: {{ghe.name}} - Price:{{ghe.price}}</p>
+                    <button class="btn btn-info" (click)="xacNhanBook()">Confirm</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

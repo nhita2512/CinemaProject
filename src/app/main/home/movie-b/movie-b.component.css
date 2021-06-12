@@ -1,0 +1,15 @@
+.fluid-container {
+  color: white;
+  height: 630px;
+  width: 100%;
+}
+
+.fluid-container h1 {
+  background: rgba(255, 255, 255, 0.35);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+/*# sourceMappingURL=movie-b.component.css.map */

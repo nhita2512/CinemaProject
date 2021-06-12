@@ -1,0 +1,22 @@
+.userList{
+  .search-form{
+    display:block;
+  }
+  .them{
+    position: relative;
+    .btnThem{
+      position: absolute;
+      right: 0;
+      top:0;
+      width: 20%;
+    }
+  }
+  .table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    box-sizing: border-box;
+    padding-left: 18%;
+  }
+  
+}

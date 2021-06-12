@@ -1,0 +1,29 @@
+.app {
+  background-image: url(https://wallpaperaccess.com/full/329633.jpg);
+  height: 100%;
+  width: 100%;
+  background-repeat: none;
+  background-size: cover;
+}
+
+.app .overlay-app {
+  position: relative;
+  color: white;
+  height: 100vh;
+  padding: 30 30;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.app .overlay-app .col-7 {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+
+.app .overlay-app .col-5 {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  width: 100%;
+}
+/*# sourceMappingURL=mobile-app.component.css.map */

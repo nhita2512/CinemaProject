@@ -1,0 +1,20 @@
+.app {
+  background-image: url(https://wallpaperaccess.com/full/329633.jpg);
+  height: 100%;
+  width: 100%;
+  background-repeat: none;
+  background-size: cover;
+}
+.app .overlay-app {
+  position: relative;
+  color: white;
+  height: 100vh;
+  padding: 30 30;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.app .overlay-app .col-lg-6 {
+  padding-top: 50px;
+}
+.app .overlay-app .mobile-text {
+  margin-left: 10%;
+}
